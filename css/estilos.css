@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h4 {
+    color: #3f1b0d;
+    font-family: Inika;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p {
+    color: #ad5a2e;
+    font-family: Inika;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container {
+    height: 100vh;
+}
+
+.banner {
+    height: 600px;
+    width: 1600px;
+    display: block;
+    padding: 0 162px 0 162px;
+
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Retina Display */
+    /* Móvil */
+    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+        @media (-webkit-min-device-pixel-ratio: 1) /* and (-moz-min-device-pixel-ratio: 1) */ {
+            background-image: url(../img/smartphone/Rectangle.webp);
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(../img/smartphone/Rectangle@2x.webp);
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 3) {
+            background-image: url(../img/smartphone/Rectangle@3x.webp);
+        }
+    }
+
+    /* Escritorio */
+    @media only screen and (min-width: 1000px) {
+        @media (-webkit-min-device-pixel-ratio: 1) {
+            background-image: url(../img/desktop/Rectangle_D.webp);
+            @media (-webkit-max-device-pixel-ratio: 2) {
+                background-image: url(../img/desktop/Rectangle_D@2x.webp);
+            }
+        }
+    }
+}
+
+.texto {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 40px;
+
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+}
